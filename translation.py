@@ -3,11 +3,17 @@ class Translation(object):
 
 #This will be appeared when anyone use start command
 
-      START = """Hello {0}
+      START = """<b>Hello {0}</b>
 
-I am a converter clone of [Convert Ns Bot](https://telegram.dog/convert_Ns_bot) by {1}
+<b>Yo !! I can convert files to Video AND Video To File format 🤓</b>,
 
-I can convert file to video or video to file with custom thumbnail support.
+<b>Send Me Any Telegram File and Reply To That File With /converttovideo or /converttofile</b>
+
+<b>Added permanent thumbnail support 💯 </b>  
+
+See /help for more!
+
+<b>Made With ❤ By @VkProjects</b>
 """
 
 
@@ -23,7 +29,7 @@ I can convert file to video or video to file with custom thumbnail support.
 
 4. Reply to file /converttovideo for converting into video.
 
-**SUPPORT GROUP:** [NS Bot Supporters](https://telegram.dog/Ns_Bot_supporters)
+**SUPPORT GROUP:** [GROUP](https://telegram.dog/VKP_BOTS)
 """
 
 
@@ -34,13 +40,11 @@ I can convert file to video or video to file with custom thumbnail support.
 
 **🧰 Framework:** Pyrogram
 
-**👨‍💻 Developer:** [Anonymous](https://t.me/Ns_AnoNymouS)
+**👨‍💻 Developer:** [VK PROJECTS](https://t.me/VKPROJECTS)
 
-**📮 Channel:** [NS BOT UPDATES](https://t.me/Ns_bot_updates)
+**📮 Channel:** [VK PROJECTS](https://t.me/VKPROJECTS)
 
-**👥 Group:** [NS BOT SUPPOTERS](https://t.me/Ns_Bot_supporters)
-
-**💻 Source Code:**[Press Me](https://github.com/Ns-AnoNymouS/TG-CONVERT-BOT)
+**👥 Group:** [VK BOTS](https://t.me/VKP_BOTS)
 
 """
 
@@ -95,7 +99,7 @@ ETA 🕰: {4}
       DOWNLOAD_START = "Trying to Download 📥"
       DOWNLOAD_COMPLETE = "✅ Media Downloaded successfully\nPreparing for upload"
       UPLOAD_START = "Trying to Upload 📤"
-      UPLOAD_COMPLETE = "THANKS FOR USING ME"
+      UPLOAD_COMPLETE = "THANKS FOR USING ME.JOIN ON @VKPROJECTS"
       SAVED_CUSTOM_THUMB_NAIL = "✅ Saved Thumbnail Successfully. This will be deleted in 24hrs"
       BANNED_TEXT = "YOU ARE BANNED. SO YOUR ARE NOT ABLE TO USE ME 🐒"
       REPLY_TEXT = "👩‍✈️ Reply to the media which you need to convert"
