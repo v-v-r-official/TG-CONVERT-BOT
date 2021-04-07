@@ -50,7 +50,7 @@ async def video(c, m):
         try:
             user = await bot.get_chat_member(update_channel, update.chat.id)
             if user.status == "kicked":
-               await update.reply_text("🤭 Sorry Dude, You are **B A N N E D**. If you feel You are not guilty please contact @HeimanTGBotSupport_bot")
+               await update.reply_text("🤭 Sorry Dude, You are **B A N N E D**. If you feel You are not guilty please contact @VKP_BOTS")
                return
         except UserNotParticipant:
             #await update.reply_text(f"Join @{update_channel} To Use Me")
@@ -76,7 +76,7 @@ async def file(c, m):
         try:
             user = await bot.get_chat_member(update_channel, update.chat.id)
             if user.status == "kicked":
-               await update.reply_text("🤭 Sorry Dude, You are **B A N N E D**. If you feel You are not guilty please contact @HeimanTGBotSupport_bot")
+               await update.reply_text("🤭 Sorry Dude, You are **B A N N E D**. If you feel You are not guilty please contact @VKP_BOTS")
                return
         except UserNotParticipant:
             #await update.reply_text(f"Join @{update_channel} To Use Me")
