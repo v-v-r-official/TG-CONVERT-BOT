@@ -26,7 +26,7 @@ async def start(c, m):
 
 
 @Client.on_message(Filters.command(["plan"]))
-async def help(c, m):
+async def plan(c, m):
 
     await c.send_message(chat_id=m.chat.id,
                          text=Translation.PLAN,
