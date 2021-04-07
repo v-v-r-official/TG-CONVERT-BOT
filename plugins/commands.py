@@ -54,8 +54,8 @@ async def about(c, m):
 
 @Client.on_message(Filters.command(["converttovideo"]))
 async def video(c, m):
-   update_channel = Config.UPDATE_CHANNEL
-    if update_channel:
+ update_channel = Config.UPDATE_CHANNEL
+  if update_channel:
         try:
             user = await bot.get_chat_member(update_channel, update.chat.id)
             if user.status == "kicked":
@@ -80,8 +80,15 @@ async def video(c, m):
 
 @Client.on_message(Filters.command(["converttofile"]))
 async def file(c, m):
-   update_channel = Config.UPDATE_CHANNEL
-    if update_channel:
+  if m.from_user.id in Config.BANNED_USER:
+      await c.send_message(chat_id=m.chat.id, text=Translation.BANNED_TEXT)
+  if m.from_user.id not in Config.BANNED_USER:
+    if m.reply_to_message is not None:
+      await download(c, m)
+    else:
+       await c.send_message(chat_id=m.chat.id, text=Translation.REPLY_TEXT)
+ update_channel = Config.UPDATE_CHANNEL
+  if update_channel:
         try:
             user = await bot.get_chat_member(update_channel, update.chat.id)
             if user.status == "kicked":
@@ -96,10 +103,3 @@ async def file(c, m):
               ])
             )
             return
-  if m.from_user.id in Config.BANNED_USER:
-      await c.send_message(chat_id=m.chat.id, text=Translation.BANNED_TEXT)
-  if m.from_user.id not in Config.BANNED_USER:
-    if m.reply_to_message is not None:
-      await download(c, m)
-    else:
-       await c.send_message(chat_id=m.chat.id, text=Translation.REPLY_TEXT)
