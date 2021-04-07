@@ -5,15 +5,9 @@ class Translation(object):
 
       START = """<b>Hello {0}</b>
 
-<b>Yo !! I can convert files to Video AND Video To File format 🤓</b>,
+<b>Am a Simple bot for Convert Telegram Media file to Streaming Video/document with Custom Thumbnail Support</b>
 
-<b>Send Me Any Telegram File and Reply To That File With /converttovideo or /converttofile</b>
-
-<b>Added permanent thumbnail support 💯 </b>  
-
-See /help for more!
-
-<b>Made With ❤ By @VkProjects</b>
+<b>You Must Join My Updates Channel For Using ME 😇</b>
 """
 
 
