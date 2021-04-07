@@ -5,9 +5,12 @@ logger = logging.getLogger(__name__)
 
 import pyrogram
 from config import Config 
-from pyrogram import Client, Filters, InlineKeyboardButton, InlineKeyboardMarkup
+from pyrogram import Client, Filters
 from translation import Translation
 from Tools.Download import download
+from pyrogram.types import ReplyKeyboardMarkup, InlineKeyboardMarkup, InlineKeyboardButton
+from pyrogram.errors import UserNotParticipant, UserBannedInChannel
+
 
 my_father = "https://t.me/{}".format(Config.USER_NAME[1:])
 support = "https://t.me/VKP_BOTS"
@@ -42,6 +45,22 @@ async def about(c, m):
 
 @Client.on_message(Filters.command(["converttovideo"]))
 async def video(c, m):
+   update_channel = Config.UPDATE_CHANNEL
+    if update_channel:
+        try:
+            user = await bot.get_chat_member(update_channel, update.chat.id)
+            if user.status == "kicked":
+               await update.reply_text("🤭 Sorry Dude, You are **B A N N E D**. If you feel You are not guilty please contact @HeimanTGBotSupport_bot")
+               return
+        except UserNotParticipant:
+            #await update.reply_text(f"Join @{update_channel} To Use Me")
+            await update.reply_text(
+                text="**Join My Updates Channel to use me & Enjoy the Free Service**",
+                reply_markup=InlineKeyboardMarkup([
+                    [ InlineKeyboardButton(text="Join Our Updates Channel", url=f"https://t.me/{update_channel}")]
+              ])
+            )
+            return
   if m.from_user.id in Config.BANNED_USER:
       await c.send_message(chat_id=m.chat.id, text=Translation.BANNED_TEXT)
   if m.from_user.id not in Config.BANNED_USER:
@@ -52,6 +71,22 @@ async def video(c, m):
 
 @Client.on_message(Filters.command(["converttofile"]))
 async def file(c, m):
+   update_channel = Config.UPDATE_CHANNEL
+    if update_channel:
+        try:
+            user = await bot.get_chat_member(update_channel, update.chat.id)
+            if user.status == "kicked":
+               await update.reply_text("🤭 Sorry Dude, You are **B A N N E D**. If you feel You are not guilty please contact @HeimanTGBotSupport_bot")
+               return
+        except UserNotParticipant:
+            #await update.reply_text(f"Join @{update_channel} To Use Me")
+            await update.reply_text(
+                text="**Join My Updates Channel to use me & Enjoy the Free Service**",
+                reply_markup=InlineKeyboardMarkup([
+                    [ InlineKeyboardButton(text="Join Our Updates Channel", url=f"https://t.me/{update_channel}")]
+              ])
+            )
+            return
   if m.from_user.id in Config.BANNED_USER:
       await c.send_message(chat_id=m.chat.id, text=Translation.BANNED_TEXT)
   if m.from_user.id not in Config.BANNED_USER:
