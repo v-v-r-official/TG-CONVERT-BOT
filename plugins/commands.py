@@ -25,6 +25,15 @@ async def start(c, m):
 
 
 
+@Client.on_message(Filters.command(["plan"]))
+async def help(c, m):
+
+    await c.send_message(chat_id=m.chat.id,
+                         text=Translation.PLAN,
+                         reply_to_message_id=m.message_id,
+                         parse_mode="markdown")
+
+
 @Client.on_message(Filters.command(["help"]))
 async def help(c, m):
 
