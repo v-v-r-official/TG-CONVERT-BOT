@@ -55,7 +55,7 @@ async def about(c, m):
 @Client.on_message(Filters.command(["converttovideo"]))
 async def video(c, m):
  update_channel = Config.UPDATE_CHANNEL
-  if Config.UPDATES_CHANNEL:
+  if update_channel:
         try:
             user = await bot.get_chat_member(update_channel, update.chat.id)
             if user.status == "kicked":
