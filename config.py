@@ -14,3 +14,4 @@ class Config(object):
     BOT_PWD = os.environ.get("BOT_PASSWORD", "")
     LOGGED_USER = []
     DB_URI = os.environ.get("DATABASE_URL", "")
+    BANNED_USER = os.environ.get("BANNED_USER", "")
