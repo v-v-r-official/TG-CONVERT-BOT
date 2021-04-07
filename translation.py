@@ -30,15 +30,15 @@ class Translation(object):
 #Please don't change this about command 🙏
 
       ABOUT = """
-**📝 Language:** Python 3
+**📝 Language:** Python 3.9.1
 
 **🧰 Framework:** Pyrogram
 
-**👨‍💻 Developer:** [VK PROJECTS](https://t.me/VKPROJECTS)
+**👨‍💻 Developer:** [VK PROJECTS](https://t.me/VKPROJECts)
 
-**📮 Channel:** [VK PROJECTS](https://t.me/VKPROJECTS)
+**📮 Channel:** [VK PROJECTS](https://t.me/VKPROJECTs)
 
-**👥 Group:** [VK BOTS](https://t.me/VKP_BOTS)
+**👥 Group:** [VK BOTS](https://t.me/VKP_BOTs)
 
 """
 
