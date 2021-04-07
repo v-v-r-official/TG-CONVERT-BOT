@@ -12,6 +12,22 @@ from translation import Translation
 
 async def upload_video(c, m, send, media_location, thumb_image_path, duration, width, height):
       await send.edit(Translation.UPLOAD_START)
+      update_channel = Config.UPDATE_CHANNEL
+ if update_channel:
+        try:
+            user = await bot.get_chat_member(update_channel, update.chat.id)
+            if user.status == "kicked":
+               await update.reply_text("🤭 Sorry Dude, You are **B A N N E D**. If you feel You are not guilty please contact @VKP_BOTS")
+               return
+        except UserNotParticipant:
+            #await update.reply_text(f"Join @{update_channel} To Use Me")
+            await update.reply_text(
+                text="**Join My Updates Channel to use me & Enjoy the Free Service**",
+                reply_markup=InlineKeyboardMarkup([
+                    [ InlineKeyboardButton(text="Join Our Updates Channel", url=f"https://t.me/{update_channel}")]
+              ])
+            )
+            return
       c_time = time.time()
       if m.text == "/converttovideo":
          await c.send_video(
