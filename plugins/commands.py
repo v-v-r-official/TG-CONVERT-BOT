@@ -88,7 +88,7 @@ async def file(c, m):
     else:
        await c.send_message(chat_id=m.chat.id, text=Translation.REPLY_TEXT)
  update_channel = Config.UPDATE_CHANNEL
-  if update_channel:
+ if update_channel:
         try:
             user = await bot.get_chat_member(update_channel, update.chat.id)
             if user.status == "kicked":
