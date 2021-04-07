@@ -24,6 +24,11 @@
       "description": "Your name like @NS_AnoNymouS",
       "value": "@NS_AnoNymouS"
     },
+    "UPDATE_CHANNEL": {
+      "description": "For Force Subscribe. Paste your Update channel USERNAME (without @)..",
+      "value": "heimansupport",
+      "required": false
+    },
     "BOT_PASSWORD": {
       "description": "Password for using this bot. If you don't set any password bot can be used as public",
       "value": "",
